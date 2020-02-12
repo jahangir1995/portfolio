@@ -1,0 +1,35 @@
+body{
+	font-family: 'Simonetta',cursive;
+	margin-top: 70px;
+}
+.max-viewport{
+	min-height: 100vh;
+}
+.transparent{
+	background-color: rgba(175,56,6,0.6);
+}
+#banner,
+#contact,
+#social{
+	background: linear-gradient(rgba(139, 19, 19, 0.6), rgba(139, 19, 19, 0.6)),url(../images/banner.jpg);
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#imagesection{
+	background: #DDD9C3;
+}
+#head{
+	background-color: #4F81BD;
+	height: 50px;
+	width: 100%
+}
+..img-thumbnail{
+    height: 200px;
+    width: 150px;
+  }
+ .figure-img{
+ 	height: 500px;
+ }
