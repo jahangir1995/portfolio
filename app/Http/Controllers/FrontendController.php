@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Message;
 use App\Post;
 use App\Document;
+use App\Category;
 
 class FrontendController extends Controller
 {
@@ -29,8 +30,9 @@ class FrontendController extends Controller
      public function gallery(){
     	return view('Pages.gallery');
     }
+
 	public function save(Request $request){
-   	//return	$request->all();
+  
 		$data = new Message;
 		$data->first_Name =$request->First_Name;
 		$data->last_Name =$request->last_Name;
@@ -38,9 +40,9 @@ class FrontendController extends Controller
 		$data->subject =$request->subject;
 		$data->message =$request->message;
 		$data->save();
-		return redirect(route('contact'));
+		return redirect(route('contact'))->with('status', 'Message send  Successfully!');
 	}
-    public function tag(){
-        return "yes";
+      public function viewbycategory(category $category) {
+        return $category;
     }
 }

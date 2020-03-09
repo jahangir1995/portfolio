@@ -28,30 +28,12 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="nav">
           <ul class="navbar-nav right">
-            <li class="nav-item"><a href="{{route('index')}}" class="nav-link"> Home</a></li>
+            <li class="nav-item"><a href="{{ route('index')}}" class="nav-link"> Home</a></li>
             <li class="nav-item"><a href="{{ route('aboutme')}}" class="nav-link"> About Me</a></li>
             <li class="nav-item"><a href="{{ route('blog')}}" class="nav-link">My Blog</a></li>
             <li class="nav-item"><a href="{{ route('contact')}}" class="nav-link"> contact</a></li>
             <li class="nav-item"><a href="{{ route('project')}}" class="nav-link"> project</a></li>
             <li class="nav-item"><a href="{{ route('gallery')}}" class="nav-link"> Gallery</a></li>
-
-
-            <li class="nav-item">
-            
-          @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" data-toggle="modal" data-target="#mymodal" class="nav-link"> login</a>
-
-                    @endauth
-                </div>
-            @endif
-
-            </li>
-
-
 
           </ul>
         </div>
@@ -71,7 +53,7 @@
                         @csrf
 
               <div class="form-group">
-                <label for="exampleInputPassword1">Username</label>
+                <label for="exampleInputPassword1">Email</label>
                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
               </div>
 

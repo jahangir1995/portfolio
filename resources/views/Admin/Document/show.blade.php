@@ -1,8 +1,7 @@
 @extends('admin.dashboard')
 @section('admin-content')
-
 <div class="row-fluid sortable">	
-	<a class="btn btn-success col-lg-offset-5" href="{{route('document.create')}}">Add Document</a>
+	<a class="btn btn-success col-lg-offset-5" href="">Add File</a>
 	
 	<div class="box span12">
 		<div class="box-header" data-original-title>
@@ -19,21 +18,21 @@
 					<tr>
 						<th>index</th>
 						<th>title</th>
+						<th>Category</th>
 						<th>file</th>
 						<th>Actions</th>
 					</tr>
 				</thead>   
 				<tbody>
 
-					@foreach($document as $v_doc)
+			
 					
 					<tr>
-						<td>{{$loop->index+1}}</td>
-						<td class="center">{{$v_doc->title}}</td>
 						<td class="center"></td>
-						<td class="center">
-							<span class="label label-success">Active</span>
-						</td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						
 						<td class="center">
 							<a class="btn btn-success" href="#">
 								<i class="halflings-icon white zoom-in"></i>  
@@ -44,12 +43,14 @@
 							
 							
 						</td>
-					</tr>
-					@endforeach
+				
+					
 				</tbody>
 			</table>            
 		</div>
 	</div><!--/span-->
 	
-</div><!--/row-->				
-@endsection  
+</div><!--/row-->		
+
+
+@endsection()

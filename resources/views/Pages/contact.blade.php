@@ -6,6 +6,11 @@
           <div class="col-md-6">
            <div class="card bg-success card-form text-center">
                 <div class="card-body">
+                  @if (session('status'))
+                      <div class="alert alert-success">
+                          {{ session('status') }}
+                      </div>
+                  @endif
                   <h3>Send me Message</h3>
                   
                   <form action="{{route('save_message')}}" method="POST">@csrf
